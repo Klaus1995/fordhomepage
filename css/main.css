@@ -3,12 +3,10 @@
 	margin: 0;
 }
 
-/*html{
-	height: 200%;
-	width: 100%;
-	overflow: hidden;
+html{
+	min-width: 100%;
 }
-*/
+
 .carousel-wrapper{
 	position: relative;
 	display: block;
@@ -77,6 +75,8 @@
 }
 
 .flex-control-paging li a{
+	box-sizing: border-box;
+	border-radius: 100%;
 	background: #fff;
 }
 
