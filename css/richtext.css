@@ -1,0 +1,43 @@
+.richtext{
+	width: 100%;
+	height: auto;
+}
+.richtext-pos-middle{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.richtext-pos-middle .desktop,.richtext-pos-middle .mobile{
+	position: static !important;
+}
+.richtext h1{
+	font-size: 3rem;
+	font-weight: 200;
+}
+.richtext h2,.richtext h3{
+	margin-bottom: 8px;
+	font-size: 44px;
+	font-weight: 200;
+}
+.richtext .desktop {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%
+}
+.richtext .mobile {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+@media (max-width:768px) {
+	.richtext .desktop {
+		display: none;
+	}
+	.richtext .mobile {
+		display: block;
+	}
+}

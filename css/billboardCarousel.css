@@ -1,0 +1,82 @@
+.billboard-carousel{
+	position: relative;
+	display: block;
+	width: 100%;
+	overflow: hidden;
+}
+
+.billboard-carousel:hover .carousel-arrows{
+	right: 0;
+}
+
+.flexslider{
+	border: none;
+	margin: 0;
+	width: 100%;
+}
+
+.carousel-arrows{
+	position: absolute;
+	right: -47px;
+	top: 50%;
+	transform: translate(0,-50%);
+	width: 47px;
+	height: 94px;
+	transition: all 0.25s;
+}
+
+.flex-prev,.flex-next{
+	display: block;
+	width: 47px;
+	height: 47px;
+	line-height: 47px;
+	font-size: 34px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	transition: all 0.4s;
+}
+
+.flex-prev{
+	background-color: #2d96cd;
+}
+
+.flex-prev:hover{
+	background-color: #fff;
+	color: #2d96cd;
+}
+
+.flex-next{
+	background-color: rgba(0,0,0,0.5);
+}
+
+.flex-next:hover{
+	background-color: #fff;
+	color: #2d96cd;
+}
+
+.carousel-controls{
+	position: absolute;
+	bottom: 75px;
+	width: 100%;
+}
+
+.flex-control-paging li{
+	margin: 0 10px;
+}
+
+.flex-control-paging li a{
+	box-sizing: border-box;
+	border-radius: 100%;
+	background: #fff;
+}
+
+.flex-control-paging li a:hover{
+	background: #fff;
+	border: 1px solid #fff;
+}
+
+.flex-control-paging li a.flex-active{
+	background: none;
+	border: 1px solid #fff;
+}
