@@ -1,15 +1,33 @@
 .richtext{
 	width: 100%;
+	min-width: 20rem;
 	height: auto;
 }
-.richtext-pos-middle{
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%,-50%);
+@media (min-width: 768px){
+	.richtext-pos-desktop-middle{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.richtext-pos-desktop-middle .desktop,.richtext-pos-desktop-middle .mobile{
+		position: static !important;
+	}
 }
-.richtext-pos-middle .desktop,.richtext-pos-middle .mobile{
-	position: static !important;
+@media (max-width: 768px){
+	.richtext-pos-mobile-middle{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+	.richtext-pos-mobile-top{
+		position: absolute;
+		top: 0;
+	}
+	.richtext-pos-mobile-middle .desktop,.richtext-pos-mobile-middle .mobile{
+		position: static !important;
+	}
 }
 .richtext h1{
 	font-size: 3rem;

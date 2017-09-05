@@ -3,6 +3,12 @@
 	top: 0;
 	left: 0;
 	width: 100%;
+	overflow: hidden;
+}
+@media (min-width: 992px){
+	.billboard p{
+		font-size: 1.0625rem;
+	}
 }
 .billboard-image {
 	width: 100%;
@@ -13,6 +19,9 @@
 .billboard p{
 	margin-bottom: 1.25rem;
 	font-weight: 200;
+}
+.billboard .font-extra-bold{
+	font-weight: 800;
 }
 .billboard a.cta-button {
 	box-sizing: border-box;
