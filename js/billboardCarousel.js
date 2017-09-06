@@ -28,13 +28,14 @@
 
 	//方法
 	function checkWidthAndHeight() {
-		if ($('.flexslider').width() < 980) {
+		var navigatorWidth = $('.flexslider').width() + 12;
+		if (navigatorWidth < 980) {
 			$('.carousel-arrows').css('display', 'none');
 		} else {
 			$('.carousel-arrows').css('display', 'block');
 		}
 
-		if ($('.flexslider').width() < 480) {
+		if (navigatorWidth < 480) {
 			$('.carousel-controls').css('bottom', '55px');
 		} else {
 			$('.carousel-controls').css('bottom', '75px');

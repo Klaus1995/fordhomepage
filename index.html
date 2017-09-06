@@ -186,7 +186,7 @@
 
 	<div class="brand-gallery">
 		<div class="item-wrapper">
-			<div class="gallery-heading">
+			<div class="gallery-heading"  data-mobile-display="show">
 				<div class="richtext">
 					<div class="desktop" style="padding-top: 10%;padding-bottom: 10%;">
 						<h2 style="text-align: center;"><span class="dark-blue">福特最新精彩呈现</span></h2>
@@ -196,7 +196,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="item">
+			<div class="item" data-mobile-display="hide">
 				<div class="image">
 					<a href="#">
 						<picture>
@@ -208,12 +208,13 @@
 							<img src="img/gallery1.jpg" alt="4">
 						</picture>
 						<div class="caption">
-							<p>探索全新福克斯<i class="icon-chevron-right"></i></p>
+							<p>探索全新福克斯</p>
+							<i class="icon-chevron-right"></i>
 						</div>
 					</a>
 				</div>
 			</div>
-			<div class="item" style="width: 50%;">
+			<div class="item" style="width: 50%;" data-mobile-display="show">
 				<div class="image">
 					<a href="#">
 						<picture>
@@ -225,12 +226,13 @@
 							<img src="img/gallery2.jpg" alt="4">
 						</picture>
 						<div class="caption">
-							<p>Mustang 拇指漂移 创造你的专属漂移视频<i class="icon-chevron-right"></i></p>
+							<p>Mustang 拇指漂移 创造你的专属漂移视频</p>
+							<i class="icon-chevron-right"></i>
 						</div>
 					</a>
 				</div>
 			</div>
-			<div class="item">
+			<div class="item" data-mobile-display="show">
 				<div class="image">
 					<a href="#">
 						<picture>
@@ -242,12 +244,13 @@
 							<img src="img/gallery3.jpg" alt="4">
 						</picture>
 						<div class="caption">
-							<p>福特金牛座 内外不凡 尽揽全局<i class="icon-chevron-right"></i></p>
+							<p>福特金牛座 内外不凡 尽揽全局</p>
+							<i class="icon-chevron-right"></i>
 						</div>
 					</a>
 				</div>
 			</div>
-			<div class="item">
+			<div class="item" data-mobile-display="show">
 				<div class="image">
 					<a href="#">
 						<picture>
@@ -259,12 +262,13 @@
 							<img src="img/gallery4.jpg" alt="4">
 						</picture>
 						<div class="caption">
-							<p>福特新全顺超越从未被超越<i class="icon-chevron-right"></i></p>
+							<p>福特新全顺超越从未被超越</p>
+							<i class="icon-chevron-right"></i>
 						</div>
 					</a>
 				</div>
 			</div>
-			<div class="item">
+			<div class="item" data-mobile-display="hide">
 				<div class="image">
 					<a href="#">
 						<picture>
@@ -276,12 +280,13 @@
 							<img src="img/gallery5.jpg" alt="4">
 						</picture>
 						<div class="caption">
-							<p>唤醒你心中的探险者<i class="icon-chevron-right"></i></p>
+							<p>唤醒你心中的探险者</p>
+							<i class="icon-chevron-right"></i>
 						</div>
 					</a>
 				</div>
 			</div>
-			<div class="item">
+			<div class="item" data-mobile-display="hide">
 				<div class="image">
 					<a href="#">
 						<picture>
@@ -293,10 +298,20 @@
 							<img src="img/gallery6.jpg" alt="4">
 						</picture>
 						<div class="caption">
-							<p>撼心试驾 谁与争锋<i class="icon-chevron-right"></i></p>
+							<p>撼心试驾 谁与争锋</p>
+							<i class="icon-chevron-right"></i>
 						</div>
 					</a>
 				</div>
+			</div>
+			<div class="hide-for-mobile"></div>
+		</div>
+		<div class="toggleBtn">
+			<div class="more">
+				<a href="javascript:;">了解更多&nbsp;&nbsp;<i class="icon-zoom-in"></i></a>
+			</div>
+			<div class="less" style="display: none;">
+				<a href="javascript:;">收起&nbsp;&nbsp;<i class="icon-zoom-out"></i></a>
 			</div>
 		</div>
 	</div>
@@ -334,5 +349,6 @@
 	<script src="js/jquery2.2.4-min.js"></script>
 	<script src="js/jquery.flexslider-min.js"></script>
 	<script type="text/javascript" src="js/billboardCarousel.js"></script>
+	<script type="text/javascript" src="js/brandGallery.js"></script>
 </body>
 </html>
