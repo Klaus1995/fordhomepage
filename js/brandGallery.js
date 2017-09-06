@@ -1,7 +1,10 @@
+/* gallery.js
+ * author:Klaus
+ * 2017/9/6
+ */
 (function() {
 	var prevWidth = $('.flexslider').width() + 12;
 	var prevDOM = $('.brand-gallery .item-wrapper').children().clone();
-	console.log(prevDOM)
 
 	checkWidthForMobile();
 
@@ -19,7 +22,6 @@
 
 	$(window).resize(function() {
 		checkWidthForMobile();
-		console.log(prevDOM)
 	});
 
 	function checkWidthForMobile() {

@@ -4,29 +4,18 @@
  */
 (function() {
 
-	var api = {};
+	$('.flexslider').flexslider({
+		animation: "slide",
+		controlsContainer: $(".carousel-controls"),
+		customDirectionNav: $(".carousel-arrows a")
+	});
 
-	api.init = function() {
-		$(window).load(function() {
-			$('.flexslider').flexslider({
-				animation: "slide",
-				controlsContainer: $(".carousel-controls"),
-				customDirectionNav: $(".carousel-arrows a")
-			});
-		});
+	checkWidthAndHeight();
 
-		checkWidthAndHeight();
-	};
-
-	//初始化
-	api.init();
-
-	//事件
 	$(window).resize(function() {
 		checkWidthAndHeight();
 	});
 
-	//方法
 	function checkWidthAndHeight() {
 		var navigatorWidth = $('.flexslider').width() + 12;
 		if (navigatorWidth < 980) {
@@ -41,10 +30,4 @@
 			$('.carousel-controls').css('bottom', '75px');
 		}
 	}
-
-	// function checkMobile() {
-	// 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-	// 		$('.carousel-arrows').css('display', 'none');
-	// 	}
-	// }
 })();
