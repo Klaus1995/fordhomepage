@@ -1,0 +1,99 @@
+.brand-gallery{
+	width: 100%;
+}
+.brand-gallery .item-wrapper{
+	width: 100%;
+	overflow: hidden;
+}
+.brand-gallery .item-wrapper .gallery-heading{
+	float: left;
+	position: relative;
+	width: 75%;
+	height: auto;
+}
+@media (max-width: 768px){
+	.brand-gallery .item-wrapper .gallery-heading{
+		width: 100% !important;
+		height: auto;
+	}
+}
+.brand-gallery .item-wrapper .gallery-heading .richtext .mobile,.brand-gallery .item-wrapper .gallery-heading .richtext .desktop{
+	position: static !important;
+}
+.brand-gallery .item-wrapper .gallery-heading h2 {
+    font-weight: 200;
+    font-size: 24px;
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    line-height: 1.1;
+    color: #626466;
+}
+@media (min-width: 768px){
+	.brand-gallery .item-wrapper .gallery-heading h2{
+		font-size: 2.25rem;
+	}
+}
+.brand-gallery .item-wrapper .item{
+	float: left;
+	display: block;
+	width: 25%;
+	height: auto;
+	overflow: hidden;
+}
+@media (max-width: 768px){
+	.brand-gallery .item-wrapper .item{
+		float: none;
+		width: 100% !important;
+		height: 100% !important;
+	}
+}
+.brand-gallery .item-wrapper .item .image:hover picture img{
+	transform: scale(1.05);
+}
+.brand-gallery .item-wrapper .item .image{
+	position: relative;
+}
+.brand-gallery .item-wrapper .item .image a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.brand-gallery .item-wrapper .item .image a img{
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: all 0.25s ease-in;
+}
+.brand-gallery .item-wrapper .item .image a .caption{
+	box-sizing: border-box;
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 20%;
+	padding: .625rem;
+	background: rgba(35,31,32,0.6);
+	color: #fff;
+	vertical-align: middle;
+}
+.brand-gallery .item-wrapper .item .image a .caption p{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-weight: 300;
+	width: 100%;
+}
+.brand-gallery .item-wrapper .item .image a .caption p i{
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	border-radius: 100%;
+	border: 1px solid #fff;
+	text-align: center;
+	font-size: 13px;
+}
