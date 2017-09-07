@@ -17,9 +17,7 @@ a{
 .dark-blue{
 	color: #1b394e;
 }
-.footer {
-	display: block;
-	height: 50px;
+.blank{
 	width: 100%;
-	background-color: red;
+	height: 80px;
 }
