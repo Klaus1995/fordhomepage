@@ -109,7 +109,7 @@
 	padding: 20px 0;
 }
 .footer .footer-link .footer-link-mobile ul li{
-	padding: 0 1.25rem .3125rem 1.25rem;
+	padding: 0 1.25rem 0.3125rem 1.25rem;
 	height: 25.5px;
 }
 .footer .footer-link .footer-link-mobile ul li a{
@@ -169,5 +169,8 @@
 	}
 	.footer .footer-link .footer-link-mobile h3 a{
 		width: 95%;
+	}
+	.footer .footer-link .footer-link-mobile ul li{
+		padding: 0 2.5rem 0.3125rem 2.5rem;
 	}
 }
