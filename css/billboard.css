@@ -6,14 +6,22 @@
 	overflow: hidden;
 }
 @media (min-width: 992px){
-	.billboard p{
+	.billboard .richtext p{
 		font-size: 1.0625rem;
 	}
 }
-@media (max-width: 767px){
-	.billboard p{
-		font-size: .875rem;
+@media (max-width: 992px){
+	.billboard .richtext p{
+		font-size: 0.9375rem;
 	}
+}
+@media (max-width: 767px){
+	.billboard .richtext p{
+		font-size: 0.875rem;
+	}
+}
+.billboard .richtext h2{
+	font-size: 2.625rem;
 }
 .billboard-image {
 	width: 100%;
