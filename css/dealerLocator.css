@@ -84,6 +84,7 @@
     max-width: inherit;
 }
 .dropdown-title{
+    display: none;
 	position:absolute;
 	height: 44px;
 	background-color: #fff;
@@ -159,7 +160,6 @@
     box-shadow: 0 4px 4px rgba(0,0,0,0.15);
 }
 .province{
-    display: none;
     list-style:none;
     height:203px;
     overflow:auto;
