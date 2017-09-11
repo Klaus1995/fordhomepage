@@ -111,8 +111,8 @@
 .dropdown-title ul li:hover{
 	background-color:#2D96CD;
 }
-.dropdown-title .active{
-    color: rgb(45,150,205);
+.form-dropdown .dropdown-title .active{
+    color: rgb(45,150,205) !important;
 }
 .left-title{
     position: absolute;bottom:12px;
@@ -146,14 +146,14 @@
     margin-bottom: 35px;
 }
 .province-list{
-    height: 210px;
+    height: 210px !important;
     width: 243px;
     border: 1px solid rgb(169,169,169);
     box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .city-list{
-    height: auto;
-    max-height: 210px;
+    height: auto !important;
+    max-height: 210px !important;
     width: 243px;
     border: 1px solid RGB(169,169,169);
     box-shadow: 0 4px 4px rgba(0,0,0,0.15);
