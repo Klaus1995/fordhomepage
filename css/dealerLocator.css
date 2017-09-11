@@ -117,7 +117,7 @@
 .left-title{
     position: absolute;bottom:12px;
 }
-.right-title{
+.city-title .right-title{
     position: absolute;bottom:12px;
     color:RGBA(169,169,169,0.5)
 }
@@ -241,6 +241,12 @@
         min-width: 13.75rem;
         width: auto;
         max-width: inherit;
+    }
+    .list-wrap .left-list{
+        display: none;
+    }
+    .list-wrap .right-list{
+        display: none;
     }
 }
 @media only screen and (max-width: 61.9375em) {
