@@ -17,13 +17,13 @@
         $("#left-list").toggle();
         $("#right-list").css("display", "none");
         $("#left-title").addClass('active');
-        if ($("#list1").css("border-bottom-width") === '0px') {
-            $("#list1").css("border-bottom", "1px solid RGB(169,169,169)");
-            $("#list3").css("border-top", "1px solid RGB(169,169,169)");
+        if ($("#provinceTitle").css("border-bottom-width") === '0px') {
+            $("#provinceTitle").css("border-bottom", "1px solid RGB(169,169,169)");
+            $("#provinceList").css("border-top", "1px solid RGB(169,169,169)");
             $("#left-title").removeClass('active');
         } else {
-            $("#list1").css("border-bottom", "none");
-            $("#list3").css("border-top", "none");
+            $("#provinceTitle").css("border-bottom", "none");
+            $("#provinceList").css("border-top", "none");
             e.stopPropagation();
         }
     })
@@ -32,13 +32,13 @@
         $("#right-list").toggle();
         $("#left-list").css("display", "none");
         $("#right-title").addClass('active');
-        if ($("#list2").css("border-bottom-width") === '0px') {
-            $("#list2").css("border-bottom", "1px solid RGB(169,169,169)");
-            $("#list4").css("border-top", "1px solid RGB(169,169,169)");
+        if ($("#cityTitle").css("border-bottom-width") === '0px') {
+            $("#cityTitle").css("border-bottom", "1px solid RGB(169,169,169)");
+            $("#cityList").css("border-top", "1px solid RGB(169,169,169)");
             $("#right-title").removeClass('active');
         } else {
-            $("#list2").css("border-bottom", "none");
-            $("#list4").css("border-top", "none");
+            $("#cityTitle").css("border-bottom", "none");
+            $("#cityList").css("border-top", "none");
             e.stopPropagation();
         }
     })
@@ -51,8 +51,8 @@
             $("#right-title").text(cityName);
         }
         $("#right-list").hide();
-        $("#list2").css("border-bottom", "1px solid RGB(169,169,169)");
-        $("#list4").css("border-top", "1px solid RGB(169,169,169)");
+        $("#cityTitle").css("border-bottom", "1px solid RGB(169,169,169)");
+        $("#cityList").css("border-top", "1px solid RGB(169,169,169)");
         console.log(1)
     }) /* 获取地区*/
 
@@ -70,10 +70,10 @@
         }
 
         $("#left-list").hide();
-        $("#list1").css("border-bottom", "1px solid RGB(169,169,169)");
-        $("#list3").css("border-top", "1px solid RGB(169,169,169)");
+        $("#provinceTitle").css("border-bottom", "1px solid RGB(169,169,169)");
+        $("#provinceList").css("border-top", "1px solid RGB(169,169,169)");
         $("#right-title").css("color", "RGB(161,161,161)")
-        $("#list2").css("border", "1px solid RGB(169,169,169)");
+        $("#cityTitle").css("border", "1px solid RGB(169,169,169)");
         console.log(2)
     })
 
@@ -88,29 +88,29 @@
 
     $(window).scroll(function() {
         //左侧下拉框上下变化
-        var divTopleft = $("#list3").offset().top;
+        var divTopleft = $("#provinceList").offset().top;
         var viewTopleft = $(window).scrollTop();
         var height = divTopleft - viewTopleft;
         if (height < 0) {
             $('#left-list').css('top', '0%');
-            $("#list1").css("border-bottom", "none");
-            $("#list1").css("border-top", "1px solid RGB(169,169,169)");
-            $("#list3").css("border-top", "none");
-            $("#list3").css("border-bottom", "1px solid RGB(169,169,169)");
-            $("#list3").css("box-shadow", "0 -4px 4px rgba(0,0,0,0)");
-            $("#list3").css("box-shadow", "0px 4px 4px rgba(0, 0, 0, 0.15)");
+            $("#provinceTitle").css("border-bottom", "none");
+            $("#provinceTitle").css("border-top", "1px solid RGB(169,169,169)");
+            $("#provinceList").css("border-top", "none");
+            $("#provinceList").css("border-bottom", "1px solid RGB(169,169,169)");
+            $("#provinceList").css("box-shadow", "0 -4px 4px rgba(0,0,0,0)");
+            $("#provinceList").css("box-shadow", "0px 4px 4px rgba(0, 0, 0, 0.15)");
         }
-        if (height + $("#list3")[0].offsetHeight >= $(window).height()) {
+        if (height + $("#provinceList")[0].offsetHeight >= $(window).height()) {
             $('#left-list').css('top', '-116%');
-            $("#list1").css("border-top", "none");
-            $("#list1").css("border-bottom", "1px solid RGB(169,169,169)");
-            $("#list3").css("border-top", "1px solid RGB(169,169,169)");
-            $("#list3").css("border-bottom", "none");
-            $("#list3").css("box-shadow", "0px 4px 4px rgba(0, 0, 0, 0)");
-            $("#list3").css("box-shadow", "0 -4px 4px rgba(0,0,0,0.15)");
+            $("#provinceTitle").css("border-top", "none");
+            $("#provinceTitle").css("border-bottom", "1px solid RGB(169,169,169)");
+            $("#provinceList").css("border-top", "1px solid RGB(169,169,169)");
+            $("#provinceList").css("border-bottom", "none");
+            $("#provinceList").css("box-shadow", "0px 4px 4px rgba(0, 0, 0, 0)");
+            $("#provinceList").css("box-shadow", "0 -4px 4px rgba(0,0,0,0.15)");
         }
         //右侧下拉框上下变化
-        var divTopR = $("#list4").offset().top;
+        var divTopR = $("#cityList").offset().top;
         var viewTopR = $(window).scrollTop();
         var height2 = divTopR - viewTopR;
         if (height2 < 0) {
@@ -124,15 +124,15 @@
         }
 
         function BottomCss() {
-            $("#list2").css("border-bottom", "none");
-            $("#list2").css("border-top", "1px solid RGB(169,169,169)");
-            $("#list4").css("border-top", "none");
-            $("#list4").css("border-bottom", "1px solid RGB(169,169,169)");
-            $("#list4").css("box-shadow", "0 -4px 4px rgba(0,0,0,0)");
-            $("#list4").css("box-shadow", "0px 4px 4px rgba(0, 0, 0, 0.15)");
+            $("#cityTitle").css("border-bottom", "none");
+            $("#cityTitle").css("border-top", "1px solid RGB(169,169,169)");
+            $("#cityList").css("border-top", "none");
+            $("#cityList").css("border-bottom", "1px solid RGB(169,169,169)");
+            $("#cityList").css("box-shadow", "0 -4px 4px rgba(0,0,0,0)");
+            $("#cityList").css("box-shadow", "0px 4px 4px rgba(0, 0, 0, 0.15)");
         }
 
-        if (height2 + $("#list4")[0].offsetHeight >= $(window).height()) {
+        if (height2 + $("#cityList")[0].offsetHeight >= $(window).height()) {
             if (window.innerWidth <= 767) {
                 $('#right-list').css("top", "-91% ");
                 TopCss();
@@ -143,12 +143,12 @@
         }
 
         function TopCss() {
-            $("#list2").css("border-top", "none");
-            $("#list2").css("border-bottom", "1px solid RGB(169,169,169)");
-            $("#list4").css("border-top", "1px solid RGB(169,169,169)");
-            $("#list4").css("border-bottom", "none");
-            $("#list4").css("box-shadow", "0px 4px 4px rgba(0, 0, 0, 0)");
-            $("#list4").css("box-shadow", "0 -4px 4px rgba(0,0,0,0.15)");
+            $("#cityTitle").css("border-top", "none");
+            $("#cityTitle").css("border-bottom", "1px solid RGB(169,169,169)");
+            $("#cityList").css("border-top", "1px solid RGB(169,169,169)");
+            $("#cityList").css("border-bottom", "none");
+            $("#cityList").css("box-shadow", "0px 4px 4px rgba(0, 0, 0, 0)");
+            $("#cityList").css("box-shadow", "0 -4px 4px rgba(0,0,0,0.15)");
         }
 
     });
