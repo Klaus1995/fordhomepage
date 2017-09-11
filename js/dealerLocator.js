@@ -28,8 +28,6 @@
         }
     })
 
-
-
     $("#form-right").click(function(e) {
         $("#right-list").toggle();
         $("#left-list").css("display", "none");
@@ -58,31 +56,32 @@
         console.log(1)
     }) /* 获取地区*/
 
+    $(document).click(function(e) {
+        if ($(e.target).parent().prop('class') === "province") {
+            var provinceIndex = $(e.target).attr('data-index');
+            var provinceName = locationData[provinceIndex].provinceKey;
+            var cityResult = locationData[provinceIndex].cityList;
+            $(".city").html('');
+            $('#right-title').text('选择一个地区*');
+            for (i = 0; i < cityResult.length; i++) {
+                $(".city").append("<li data-index='" + i + "'><span>" + cityResult[i].cityKey + "</span></li>")
+            }
+            $("#left-title").text(provinceName);
+        }
+
+        $("#left-list").hide();
+        $("#list1").css("border-bottom", "1px solid RGB(169,169,169)");
+        $("#list3").css("border-top", "1px solid RGB(169,169,169)");
+        $("#right-title").css("color", "RGB(161,161,161)")
+        $("#list2").css("border", "1px solid RGB(169,169,169)");
+        console.log(2)
+    })
+
 
     function fillSelect(result) {
         for (i = 0; i < result.length; i++) {
             $(".province").append("<li data-index='" + i + "'><span>" + result[i].provinceKey + "</span></li>")
         }
-        $(document).click(function(e) {
-            if ($(e.target).parent().prop('class') === "province") {
-                var provinceIndex = $(e.target).attr('data-index');
-                var provinceName = result[provinceIndex].provinceKey;
-                var cityResult = result[provinceIndex].cityList;
-                $(".city").html('');
-                $('#right-title').text('选择一个地区*');
-                for (i = 0; i < cityResult.length; i++) {
-                    $(".city").append("<li data-index='" + i + "'><span>" + cityResult[i].cityKey + "</span></li>")
-                }
-                $("#left-title").text(provinceName);
-            }
-
-            $("#left-list").hide();
-            $("#list1").css("border-bottom", "1px solid RGB(169,169,169)");
-            $("#list3").css("border-top", "1px solid RGB(169,169,169)");
-            $("#right-title").css("color", "RGB(161,161,161)")
-            $("#list2").css("border", "1px solid RGB(169,169,169)");
-            console.log(2)
-        })
 
     }
 
