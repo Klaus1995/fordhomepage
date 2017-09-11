@@ -1,11 +1,14 @@
 (function() {
 
+    var locationData;
+
     $.ajax({
         url: "data.json",
         type: "GET",
         dataType: 'json',
         async: true,
         success: function(result) {
+            locationData = result;
             fillSelect(result);
         }
     });
@@ -17,11 +20,12 @@
         if ($("#list1").css("border-bottom-width") === '0px') {
             $("#list1").css("border-bottom", "1px solid RGB(169,169,169)");
             $("#list3").css("border-top", "1px solid RGB(169,169,169)");
+            $("#left-title").removeClass('active');
         } else {
             $("#list1").css("border-bottom", "none");
             $("#list3").css("border-top", "none");
+            e.stopPropagation();
         }
-        e.stopPropagation();
     })
 
 
@@ -33,17 +37,18 @@
         if ($("#list2").css("border-bottom-width") === '0px') {
             $("#list2").css("border-bottom", "1px solid RGB(169,169,169)");
             $("#list4").css("border-top", "1px solid RGB(169,169,169)");
+            $("#right-title").removeClass('active');
         } else {
             $("#list2").css("border-bottom", "none");
             $("#list4").css("border-top", "none");
+            e.stopPropagation();
         }
-        e.stopPropagation();
     })
 
 
     $(document).click(function(e) {
-
         if ($(e.target).parent().prop('class') === "city") {
+            var cityIndex = $(e.target).attr('data-index');
             var cityName = $(e.target).children().text();
             $("#right-title").text(cityName);
         }
