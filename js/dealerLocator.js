@@ -55,7 +55,7 @@
         $("#right-list").hide();
         $("#list2").css("border-bottom", "1px solid RGB(169,169,169)");
         $("#list4").css("border-top", "1px solid RGB(169,169,169)");
-        $("#list2").css("border", "1px solid #2d96cd");
+        console.log(1)
     }) /* 获取地区*/
 
 
@@ -79,10 +79,9 @@
             $("#left-list").hide();
             $("#list1").css("border-bottom", "1px solid RGB(169,169,169)");
             $("#list3").css("border-top", "1px solid RGB(169,169,169)");
-            $("#list1").css("border", "1px solid #2d96cd");
             $("#right-title").css("color", "RGB(161,161,161)")
             $("#list2").css("border", "1px solid RGB(169,169,169)");
-
+            console.log(2)
         })
 
     }
