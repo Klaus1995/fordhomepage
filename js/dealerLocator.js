@@ -1716,6 +1716,8 @@
         $("#leftList").toggle();
         $("#leftTitle").toggleClass('active');
         $("#rightList").hide();
+        $("#rightTitle").removeClass('active');
+        $("#cityTitle").css("border", "1px solid RGB(169,169,169)");
         if ($("#leftTitle").prop('class').indexOf('active') !== -1) {
             $('#leftList').css('top', '0%');
             $("#provinceTitle").css("border-top", "1px solid RGB(169,169,169)");
@@ -1734,6 +1736,8 @@
             $("#rightList").toggle();
             $("#rightTitle").toggleClass('active');
             $("#leftList").hide();
+            $("#leftTitle").removeClass('active');
+            $("#provinceTitle").css("border", "1px solid RGB(169,169,169)");
             if ($("#rightTitle").prop('class').indexOf('active') !== -1) {
                 var divTopR = $("#cityList").offset().top;
                 var viewTopR = $(window).scrollTop();

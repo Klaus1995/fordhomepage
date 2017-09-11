@@ -119,7 +119,7 @@
 }
 .city-title .right-title{
     position: absolute;bottom:12px;
-    color:RGBA(169,169,169,0.5)
+    color: RGBA(169,169,169,0.5);
 }
 .left-list{
     z-index: 100;
