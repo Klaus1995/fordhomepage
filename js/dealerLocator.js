@@ -99,7 +99,6 @@
             $('#' + type).append("<li data-index='" + i + "'><span>" + data[i][type + 'Value'] + "</span></li>")
         }
     }
-    fillSelect(locationData, 'province');
 
 
     $(window).scroll(function() {
