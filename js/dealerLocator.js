@@ -100,7 +100,6 @@
         }
     }
 
-
     $(window).scroll(function() {
         //左侧下拉框上下变化
         var divTopleft = $("#provinceList").offset().top;
