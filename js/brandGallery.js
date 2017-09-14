@@ -3,7 +3,7 @@
  * 2017/9/6
  */
 (function() {
-	var prevWidth = $('.flexslider').width() + 12;
+	var prevWidth = $(window).width() + 17;
 	var prevDOM = $('.brand-gallery .item-wrapper').children().clone();
 
 	checkWidthForMobile();
@@ -25,7 +25,7 @@
 	});
 
 	function checkWidthForMobile() {
-		var navigatorWidth = $('.flexslider').width() + 12;
+		var navigatorWidth = $(window).width() + 17;
 		if (navigatorWidth < 768) {
 			$('.brand-gallery .item-wrapper .hide-for-mobile').append($('.brand-gallery .item-wrapper div[data-mobile-display=hide]'));
 			if (prevWidth >= 768) {
@@ -34,7 +34,6 @@
 				$('.less').css('display', 'none');
 			}
 		} else {
-			//$('.brand-gallery .item-wrapper .hide-for-mobile').css('display', 'block');
 			$('.brand-gallery .item-wrapper').html(prevDOM);
 		}
 		prevWidth = navigatorWidth;
