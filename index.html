@@ -17,7 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="css/dealerLocator.css">
 </head>
 <body>
-
+	<div class="header-wrapper"></div>
 	<div class="header">
 		<div class="header-nav">
 			<div class="brand-logo">
@@ -34,7 +34,7 @@
 				</div>
 				<div class="main-nav">
 					<ul>
-						<li><a href="#">车型展示</a></li>
+						<li><a href="#" id="viewAllModel">车型展示</a></li>
 						<li><a href="#">购车专区</a></li>
 						<li><a href="#">车主服务</a></li>
 						<li><a href="#">福特科技</a></li>
@@ -47,6 +47,53 @@
 				<a href="#">
 					<i class="icon-reorder"></i>
 				</a>
+			</div>
+		</div>
+		<div class="header-content">
+			<div class="view-all-model">
+				<div class="model-type">
+					<ul>
+						<li><a href="javascript:;" data-target="0">轿车</a></li>
+						<li><a href="javascript:;" data-target="1">SUV</a></li>
+						<li><a href="javascript:;" data-target="2">MPV</a></li>
+						<li><a href="javascript:;" data-target="3">性能车</a></li>
+						<li><a href="javascript:;" data-target="4">商用车</a></li>
+					</ul>
+				</div>
+				<div class="vehicle">
+					<ul>
+						<li><a href="#"><img src="img/viewall11.jpg"><span>全新福特福克斯</span></a></li>
+						<li><a href="#"><img src="img/viewall12.jpg"><span>福特福睿斯</span></a></li>
+						<li><a href="#"><img src="img/viewall13.jpg"><span>福特新蒙迪欧</span></a></li>
+						<li><a href="#"><img src="img/viewall14.jpg"><span>福特金牛座</span></a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><img src="img/viewall21.jpg" alt=""><span>全新福特翼博</span></a></li>
+						<li><a href="#"><img src="img/viewall22.jpg" alt=""><span>新福特翼虎</span></a></li>
+						<li><a href="#"><img src="img/viewall23.jpg" alt=""><span>福特锐界</span></a></li>
+						<li><a href="#"><img src="img/viewall24.jpg" alt=""><span>新福特撼路者</span></a></li>
+						<li><a href="#"><img src="img/viewall25.jpg" alt=""><span>新福特探险者（进口）</span></a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><img src="img/viewall31.jpg" alt=""><span>福特途睿欧</span></a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><img src="img/viewall41.jpg" alt=""><span>福特GT（进口）</span></a></li>
+						<li><a href="#"><img src="img/viewall42.jpg" alt=""><span>福特MUSTANG（进口）</span></a></li>
+						<li><a href="#"><img src="img/viewall43.jpg" alt=""><span>福特福克斯ST（进口）</span></a></li>
+						<li><a href="#"><img src="img/viewall44.jpg" alt=""><span>全新福克斯RS（进口）</span></a></li>
+						<li><a href="#"><img src="img/viewall45.jpg" alt=""><span>福特F-150猛禽（进口）</span></a></li>
+					</ul>
+					<ul>
+						<li><a href="#"><img src="img/viewall51.jpg" alt=""><span>新世代全顺</span></a></li>
+						<li><a href="#"><img src="img/viewall52.jpg" alt=""><span>全顺改装车</span></a></li>
+						<li><a href="#"><img src="img/viewall53.jpg" alt=""><span>新全顺</span></a></li>
+					</ul>
+				</div>
+				<div class="bottom-button">
+					<p><a href="#" class="cta-button">观看全车系</a></p>
+					<p><a href="#" class="cta-button">下载产品手册</a></p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -563,6 +610,7 @@
 	<script src="js/jquery2.2.4-min.js"></script>
 	<script src="js/jquery.flexslider-min.js"></script>
 	<script type="text/javascript" src="js/picturefill.min.js"></script>
+	<script type="text/javascript" src="js/header.js"></script>
 	<script type="text/javascript" src="js/billboardCarousel.js"></script>
 	<script type="text/javascript" src="js/brandGallery.js"></script>
 	<script type="text/javascript" src="js/footer.js"></script>
