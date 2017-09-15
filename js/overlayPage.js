@@ -8,7 +8,14 @@
 		$('.overlay-page').show();
 	});
 
-	$('.overlay-page').click(function() {
+	$('.overlay-page').click(function(e) {
+		if ($(e.target).prop('class') === 'overlay-wrapper') {
+			$('.overlay-page').hide();
+		}
+		e.stopPropagation();
+	});
+
+	$('.overlay-page #closeBtn').click(function() {
 		$('.overlay-page').hide();
 	});
 })();
